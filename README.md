@@ -10,7 +10,7 @@ CancellationToken に対応する非同期メソッドへタイムアウト処�
 
 ## サンプルのポイント
 
-XTickTackPlayer.cs が本サンプルの主要部分です。
+[XTickTackPlayer.cs](https://github.com/Nov-Lab/Exam_TimeoutByCancellationToken/blob/master/Exam_TimeoutByCancellationToken/XTickTackPlayer.cs) が本サンプルの主要部分です。
 
 XTickTackPlayer.XPlayAsync メソッドにより、既存の非同期メソッド TickTackPlayer.PlayAsync にタイムアウト処理を追加した拡張メソッドを提供しています。
 

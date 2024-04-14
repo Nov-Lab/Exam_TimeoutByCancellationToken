@@ -1,5 +1,6 @@
 ﻿// @(h)FrmAppMain.cs ver 0.00 ( '24.04.12 Nov-Lab ) 作成開始
 // @(h)FrmAppMain.cs ver 0.51 ( '24.04.13 Nov-Lab ) ベータ版完成
+// @(h)FrmAppMain.cs ver 0.51a( '24.04.14 Nov-Lab ) コメント整理
 
 // @(s)
 // 　【メインフォーム】本アプリケーションのメインフォームです。
@@ -43,7 +44,7 @@ namespace Exam_TimeoutByCancellationToken
         protected CancellationTokenSource m_ctsOperation;
 
         /// <summary>
-        /// 【チクタクプレイヤー】チクタク音を再生するためのプレイヤーです。
+        /// 【チクタク音プレイヤー】チクタク音を再生するためのプレイヤーです。
         /// </summary>
         protected TickTackPlayer m_ticktackPlayer = new TickTackPlayer();
 
@@ -104,7 +105,7 @@ namespace Exam_TimeoutByCancellationToken
             try
             {                                                           //// try開始
                 Debug.Print("Start Ticktack.");
-                await m_ticktackPlayer.XPlayAsync(                      /////  タイムアウト付きでチクタク音を非同期再生する
+                await m_ticktackPlayer.XPlayAsync(                      /////  タイムアウト付きでチクタク音プレイヤーを非同期再生する
                     (int)NumRepeat.Value, (int)NumTimeout.Value, m_ctsOperation.Token);
                 Debug.Print("End Ticktack");
 
@@ -155,7 +156,7 @@ namespace Exam_TimeoutByCancellationToken
             try
             {                                                           //// try開始
                 Debug.Print("Start Ticktack.");
-                await m_ticktackPlayer.PlayAsync(                       /////  タイムアウトなしでチクタク音を非同期再生する
+                await m_ticktackPlayer.PlayAsync(                       /////  タイムアウトなしでチクタク音プレイヤーを非同期再生する
                     (int)NumRepeat.Value, m_ctsOperation.Token);
                 Debug.Print("End Ticktack");
 
